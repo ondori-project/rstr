@@ -1,0 +1,58 @@
+Source: rstr
+Section: utils
+Priority: optional
+Maintainer: Jonas Smedegaard <dr@jones.dk> ***TODO***
+Uploaders: Micah Anderson <micah@debian.org> ***TODO***
+Build-Depends: debhelper,
+ rstscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libboost-system-rst (>> 1.35) | libboost-system1.35-rst,
+ libdb4.8++-rst,
+ libssl-rst,
+ pkg-config,
+ libminiupnpc8-rst,
+ libboost-filesystem-rst (>> 1.35) | libboost-filesystem1.35-rst,
+ libboost-program-options-rst (>> 1.35) | libboost-program-options1.35-rst,
+ libboost-thread-rst (>> 1.35) | libboost-thread1.35-rst,
+ libboost-test-rst (>> 1.35) | libboost-test1.35-rst,
+ qt4-qmake,
+ libqt4-rst,
+ libqrencode-rst,
+ libprotobuf-rst, protobuf-compiler
+Standards-Version: 3.9.2
+Homepage: http://www.rstr.io
+Vcs-Git: git://github.com/rstr-coin/RSTR.git
+Vcs-Browser: https://github.com/rstr-coin/RSTR
+
+Package: rstrd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ RSTR is a free open source peer-to-peer electronic cash system that
+ is completely decentralized, without the need for a central server or
+ trusted parties.  Users hold the crypto keys to their own money and
+ transact directly with each other, with the help of a P2P network to
+ check for double-spending.
+ .
+ Full transaction history is stored locally at each client.  This
+ requires 1+ GB of space, slowly growing.
+ .
+ This package provides the daemon, rstrd, and the CLI tool
+ rstr-cli to interact with the daemon.
+
+Package: rstr-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ RSTR is a free open source peer-to-peer electronic cash system that
+ is completely decentralized, without the need for a central server or
+ trusted parties.  Users hold the crypto keys to their own money and
+ transact directly with each other, with the help of a P2P network to
+ check for double-spending.
+ .
+ Full transaction history is stored locally at each client.  This
+ requires 1+ GB of space, slowly growing.
+ .
+ This package provides RSTR-Qt, a GUI for RSTR based on Qt.

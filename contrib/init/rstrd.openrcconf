@@ -1,0 +1,26 @@
+# /etc/conf.d/rstrd: config file for /etc/init.d/rstrd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/rstr/rstr.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/rstrd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/rstrd.pid"
+
+# Where to write rstrd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/rstrd"
+
+# User and group to own rstrd process
+#BITCOIND_USER="rstr"
+#BITCOIND_GROUP="rstr"
+
+# Path to rstrd executable
+#BITCOIND_BIN="/usr/bin/rstrd"
+
+# Nice value to run rstrd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

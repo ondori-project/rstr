@@ -1,0 +1,26 @@
+[Unit]
+Description=RSTR's distributed currency daemon
+After=network.target
+
+[Service]
+User=rstr
+Group=rstr
+
+Type=forking
+PIDFile=/var/lib/rstrd/rstrd.pid
+
+ExecStart=/usr/bin/rstrd -daemon -pid=/var/lib/rstrd/rstrd.pid \
+          -conf=/etc/rstr/rstr.conf -datadir=/var/lib/rstrd
+
+ExecStop=-/usr/bin/rstr-cli -conf=/etc/rstr/rstr.conf \
+         -datadir=/var/lib/rstrd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
