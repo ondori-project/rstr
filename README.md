@@ -49,5 +49,3 @@ Please visit us at: [rstr.io](http://rstr.io)
 *At this current time. May be subject to change. 
 
 **First year budget will not be generated with block reward, but allocated to budget in lump. 
-
-***zPOS to come
